@@ -13,5 +13,5 @@ app.use('/api', mainRouter)
 
 app.listen(PORT || process.env.PORT, ()=>{
     require('./DL/db').connect()
-    console.log('server runing on port: ', PORT);
+    console.log('server runing on port: ', process.env.PORT);
 })
