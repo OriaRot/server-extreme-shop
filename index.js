@@ -11,7 +11,7 @@ app.use(express.json())
 const mainRouter = require('./Routes/index')
 app.use('/api', mainRouter)
 
-app.listen(PORT || process.env.PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     require('./DL/db').connect()
     console.log('server runing on port: ', process.env.PORT);
 })
